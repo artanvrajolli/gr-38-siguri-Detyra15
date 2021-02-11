@@ -29,6 +29,7 @@ Përmes këtij aplikacioni përdoruesit do të mund të kryejnë këto veprime:
 * Register  
 * Login with password  
 * Login with token  
+
 Meqenëse është një aplikacion që implementon vërtetimin me token atëherë kemi importuar librarin JWT(JSON Web Token).  
 Për çdo përdorues që llogohet duke dhënë emrin dhe password-in , në rast suksesi lëshohet një token i nënshkruar i cili përdoret për autentifikim të shfrytëzuesit.  
 
@@ -42,5 +43,6 @@ Procedura e vertetimit të përdoruesit:
 *	Në rast se përdoruesi nuk ekziston ose fjalkalimi nuk përputhet atëherë kthejmë përgjigjen me mesazh gabimi.  
 *	Krijojmë një token si payload ku ruhet emri i përdoruesit për të identifikuar përdoruesin.  
 *	Enkodojmë payload-in me një string sekret dhe algoritëm të specifikuar.  
+
 String sekret dhe algoritmi i specifikuar janë ruajtur në një fajll të veçantë constants.py i cili modul është i importur tek events.py  
 Pas marrjes se token-it përdoruesi duhet të kopjojë atë dhe ta vendosë në fushën qe i kërkohet. Dekodojmë tokenin me të njëjtin string sekret dhe me algoritmin e specifikuar , në rast se tokeni nuk është i njejtë atëherë kthejmë përgjigjen me mesazh gabimi.  
